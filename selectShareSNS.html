@@ -5,29 +5,53 @@
     <title>selectShareSNS</title>
     <style type="text/css">
       <!--
-        ul {
-            display:table;
-            table-layout:fixed;
-            width:500px;
-            padding-bottom: 40px;
-          }
+        .contents {
+          padding-top: 20px;
+          padding-bottom: 0;
+          padding-left: 0;
+          padding-right: 0;
+        }
+        .contents ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+        .contents ul li {
+          padding: 0;
+          margin: 0;
+        }
+        .contents ul li a {
+          color:#000;
+          text-decoration: none!important;
+          padding-left: 15px;
+          padding-right: 15px;
+          padding-top: 30px;
+          padding-bottom: 30px;
+          display: block!important;
+          border: 1px solid #ddd;
+        }
+        .contents ul li a:hover {
+          color: #fff;
+          text-decoration: none!important;
+          background: #dd0000;
+        }
+        ul.nav  {
+          display: table;
+          table-layout: fixed;
+          width: 100%;
+        }
+        ul.nav li{
+          display: table-cell;
+          vertical-align: middle;
+          text-align: center;
+        }
 
-        ul li {
-            display:table-cell;
-            vertical-align:middle;
-            text-align:center;
-            background-color:red;
-            border-left:1px solid white;
-          }
-
-        ul li:first-child {
-            border:none;    
-          }
-
-        ul li a {
-          display:block;
-          text-decoration:none;
-          color:white;
+        textarea {
+          resize: none;
+          height: 200px;
+          width:96%;
+          margin-left: 2%;
+          margin-right: 2%;
         }
        -->
       </style>
@@ -36,28 +60,18 @@
 
   <body>
 
-      <!-- 動画を挿入-->   
- 
-      <ul>
-        <li>
-          <a href="#">twitter</a><!-- ボタンを挿入-->
-        </li>
-
-        <li>
-          <a href="#">instagram</a><!-- ボタンを挿入-->
-        </li>
-
-        <li>
-          <a href="#">facebook</a><!-- ボタンを挿入-->
-        </li>
-      </ul>
+      <!-- 動画を挿入-->
+      <div class = "contents">
+        <ul class = "nav">
+          <li><a href="#">twitter</a><!-- ボタンを挿入--></li>
+          <li><a href="#">instagram</a><!-- ボタンを挿入--></li>
+          <li><a href="#">facebook</a><!-- ボタンを挿入--></li>
+        </ul>
+      </div>
 
       <form method="post" action="example.cgi">
-         <p>
-          <textarea name="comment" cols="30" rows="5">##コメントを入力</textarea>
-         </p>
+        <p><textarea name="comment" cols="30" rows="5">##コメントを入力</textarea></p>
       </form>
 
-  
   </body>
 </html>
