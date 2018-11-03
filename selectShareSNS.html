@@ -3,11 +3,61 @@
   <head>
     <meta charset="utf-8">
     <title>selectShareSNS</title>
+    <style type="text/css">
+      <!--
+        ul {
+            display:table;
+            table-layout:fixed;
+            width:500px;
+            padding-bottom: 40px;
+          }
+
+        ul li {
+            display:table-cell;
+            vertical-align:middle;
+            text-align:center;
+            background-color:red;
+            border-left:1px solid white;
+          }
+
+        ul li:first-child {
+            border:none;    
+          }
+
+        ul li a {
+          display:block;
+          text-decoration:none;
+          color:white;
+        }
+       -->
+      </style>
   </head>
 
 
   <body>
 
+      <!-- 動画を挿入-->   
+ 
+      <ul>
+        <li>
+          <a href="#">twitter</a><!-- ボタンを挿入-->
+        </li>
 
+        <li>
+          <a href="#">instagram</a><!-- ボタンを挿入-->
+        </li>
+
+        <li>
+          <a href="#">facebook</a><!-- ボタンを挿入-->
+        </li>
+      </ul>
+
+      <form method="post" action="example.cgi">
+         <p>
+          <textarea name="comment" cols="30" rows="5">##コメントを入力</textarea>
+         </p>
+      </form>
+
+  
   </body>
 </html>
