@@ -6,11 +6,6 @@
 
     <style type="text/css">
       <!--
-        header {
-          margin-left: 20%;
-          margin-right: 20%
-        }
-
         h1 {
           text-align: center;
           margin-left: 5%;
@@ -18,14 +13,52 @@
         }
 
         h2 {
-          text-align: center;
           padding: 0.5em 1em;
-          margin: 2em 0;
-          font-weight: bold;
-          color: #6091d3;/*文字色*/
-          background: #FFF;
-          border: solid 3px #6091d3;/*線*/
-          border-radius: 10px;/*角の丸み*/
+          margin: 0;
+          color: #232323;
+          background: #fff8e8;
+          border-left: solid 10px #ffc06e;
+        }
+
+        .contents {
+          padding-top: 10px;
+          padding-bottom: 0;
+          padding-left: 0;
+          padding-right: 0;
+        }
+        .contents ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+        .contents ul li {
+          padding: 0;
+          margin: 0;
+        }
+        .contents ul li a {
+          color:#000;
+          text-decoration: none!important;
+          padding-left: 15px;
+          padding-right: 15px;
+          padding-top: 25px;
+          padding-bottom: 25px;
+          display: block!important;
+          border: 1px solid #ddd;
+        }
+        .contents ul li a:hover {
+          color: #fff;
+          text-decoration: none!important;
+          background: #dd0000;
+        }
+        ul.nav  {
+          display: table;
+          table-layout: fixed;
+          width: 100%;
+        }
+        ul.nav li{
+          display: table-cell;
+          vertical-align: middle;
+          text-align: center;
         }
       -->
     </style>
@@ -33,29 +66,19 @@
   </head>
 
   <body>
-    <header>
-      プレゼントを受け取りました
-    </header>
-
-    <h1>@@人の名前@@さんからのサプライズプレゼントです！</h1>
+    <h1>@@@さんからのサプライズプレゼントです！</h1>
 
     <!-- 動画を挿入-->
 
     <h2>@@メッセージ@@</h2>
 
-
-    <p>動画を共有しましょう</p>
-    <ul>
-        <li>
-            <!-- 同じページでselectShareSNSを開く -->
-            <input type="button" value="SNSで共有する" onClick="location.href='selectShareSNS.html'">
-        </li>
-
-        <li>
-            <!-- 同じページでselectShareLocalを開く -->
-            <input type="button" value="@@人の名前@@さんと共有する" onClick="location.href='selectShareLocal.html'">
-        </li>
-    </ul>
+    <!--<p>動画を共有しましょう</p>-->
+    <div class = "contents">
+      <ul class = "nav">
+        <li><a href="#">SNSで共有する</a></li>
+        <li><a href="#">@@@さんと共有する</a></li>
+      </ul>
+    </div>
 
   </body>
 </html>
