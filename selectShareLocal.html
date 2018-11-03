@@ -25,7 +25,6 @@
           margin: 0;
         }
         .contents ul li a {
-          color: #6F6F6F;
           text-decoration: none!important;
           padding-left: 15px;
           padding-right: 15px;
@@ -33,11 +32,17 @@
           padding-bottom: 25px;
           display: block!important;
           border: 1px solid #ddd;
+          position: relative;
+          display: inline-block;
+          font-weight: bold;
+          transition: .4s;
+          border: 1px solid #ddd;
+          color: #fff;
         }
         .contents ul li a:hover {
-          color: #fff;
           text-decoration: none!important;
-          background: #dd0000;
+          background: #00bcd4;
+          color: white;
         }
         ul.nav  {
           display: table;
@@ -49,13 +54,18 @@
           vertical-align: middle;
           text-align: center;
         }
-
         textarea {
           resize: none;
           height: 200px;
           width:96%;
           margin-left: 2%;
           margin-right: 2%;
+        }
+        .line {
+          background: #00c300;
+        }
+        .mail {
+          background: #dd4b39;
         }
        -->
       </style>
@@ -67,8 +77,8 @@
 
     <div class = "contents">
     <ul class = "nav">
-        <li><a href="#">LINE</a></li>
-        <li><a href="#">メール</a></li>
+        <li><a href="#" class = "line">LINE</a></li>
+        <li><a href="#" class = "mail">メール</a></li>
     </ul>
     </div>
 

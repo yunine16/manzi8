@@ -25,19 +25,23 @@
           margin: 0;
         }
         .contents ul li a {
-          color: #6F6F6F;
           text-decoration: none!important;
           padding-left: 15px;
           padding-right: 15px;
           padding-top: 25px;
           padding-bottom: 25px;
           display: block!important;
+          position: relative;
+          display: inline-block;
+          font-weight: bold;
+          transition: .4s;
           border: 1px solid #ddd;
+          color: #fff;
         }
         .contents ul li a:hover {
-          color: #fff;
           text-decoration: none!important;
-          background: #dd0000;
+          background: #00bcd4;
+          color: white;
         }
         ul.nav  {
           display: table;
@@ -49,13 +53,21 @@
           vertical-align: middle;
           text-align: center;
         }
-
         textarea {
           resize: none;
           height: 200px;
           width:96%;
           margin-left: 2%;
           margin-right: 2%;
+        }
+        .twitter {
+          background: #55acee;
+        }
+        .insta {
+          background: #e34c26;
+        }
+        .face {
+          background: #315096;
         }
        -->
       </style>
@@ -66,9 +78,9 @@
       <!-- 動画を挿入-->
       <div class = "contents">
         <ul class = "nav">
-          <li><a href="#">twitter</a><!-- ボタンを挿入--></li>
-          <li><a href="#">instagram</a><!-- ボタンを挿入--></li>
-          <li><a href="#">facebook</a><!-- ボタンを挿入--></li>
+          <li><a href="#" class = "twitter">twitter</a></li>
+          <li><a href="#" class = "insta">instagram</a></li>
+          <li><a href="#" class = "face">facebook</a></li>
         </ul>
       </div>
 
