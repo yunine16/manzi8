@@ -5,8 +5,33 @@
     <title></title>
   </head>
 
-
   <body>
-    
+    <button onclick="listObjs()">S3 - List Objects</button>
+    <div id="objImgs"></div>
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.0.0-rc1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript">
+  	AWS.config.update({ accessKeyId: 'AKIAIJFIUZLT627PTCIQ', secretAccessKey: '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' });
+      var s3BucketName = 'teammanji';
+      var s3RegionName = 'ap-northeast-1';
+      function listObjs() {
+        var s3 = new AWS.S3({ params: { Bucket: s3BucketName, Region: s3RegionName } });
+        s3.listObjects(function (error, data) {
+          if (error === null) {
+            var html_imgs = '';
+
+            jQuery.each(data.Contents, function (index, obj) {
+              var params = { Bucket: s3BucketName, Key: obj.Key };
+              var url = s3.getSignedUrl('getObject', params);
+              html_imgs += "<img src='" + url + "' width='300px' height='300px' /><br/>";
+            });
+            jQuery("#objImgs").html(html_imgs);
+          } else {
+            console.log(error);
+          }
+        });
+      }
+      // listObjs();
+    </script>
   </body>
 </html>
