@@ -6,6 +6,7 @@
 
     <script src="https://sdk.amazonaws.com/js/aws-sdk-2.0.0-rc1.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="send_sns.js"></script>
     <script type="text/javascript">
       AWS.config.update({ accessKeyId: 'AKIAIJFIUZLT627PTCIQ', secretAccessKey: '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' });
         var s3BucketName = 'teammanji';
@@ -102,15 +103,13 @@
 
     <div id="objImgs"></div>
 
-    <form method="post" action="example.cgi">
-      <p>
-        <textarea name="comment" cols="30" rows="5">##コメントを入力</textarea>
-      </p>
+    <form name="form" action="example.cgi">
+        <textarea name="comment" cols="30" rows="5" value = "">##コメントを入力</textarea>
     </form>
 
     <div class = "contents">
     <ul class = "nav">
-        <li><a href="#" class = "line">LINE</a></li>
+        <li><a href="#" class = "line" onclick="line_link()">LINE</a></li>
         <li><a href="#" class = "mail">メール</a></li>
     </ul>
     </div>
